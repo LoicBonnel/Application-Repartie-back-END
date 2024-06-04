@@ -1,0 +1,137 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de gestion de blague",
+        "version": "1.0.0",
+        "description": "Une API pour gérer des informations sur la blague."
+    },
+    "paths": {
+        "/api/v1/": {
+            "get": {
+                "summary": "RACINE API",
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": "RACINE API"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Créer une ressource",
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": "bounty"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/blagues": {
+            "get": {
+                "summary": "Obtenir la liste des blagues",
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Créer une nouvelle blagues",
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/blagues/{id}": {
+            "get": {
+                "summary": "Obtenir une blague par ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID de la blague",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "blagues/{id}": {
+            "delete": {
+                "summary": "Supprimer une blague par son ID",
+                "parameters": [
+                    {
+                        "name":"id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID de la blague",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Blague supprimé avec succès",
+                        "content": {
+                            "application/json": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/blagues/random": {
+            "get": {
+                "summary": "Obtenir une blague aléatoire",
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
