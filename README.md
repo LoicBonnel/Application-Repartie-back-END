@@ -7,19 +7,26 @@ Une API pour gérer des blagues Carembar, construite avec Node.js, Express, et S
 1. **Clonez le dépôt :**
 
    ```bash
-   git clone <URL_DU_DÉPÔT>
-   cd <NOM_DU_RÉPÔT>
+   git clone <https://github.com/LoicBonnel/Application-Repartie-back-END.git>
+   cd <Application-Repartie-back-END>
    ```
 
 2. **Installez les dépendances :**
 
    ```bash
+   npm i nodemon
    npm install
+   npm install express
+   npm install swagger-jsdoc
+   npm install swagger-ui-express
+   npm init
+   npm install cors --> autorise les ports publique
+   npm install sequelize sqlite3
    ```
 
 3. **Démarrez le serveur :**
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Utilisation
